@@ -1,0 +1,62 @@
+version: '1.1'
+services:
+  docker1:
+    container_name: docker1
+    image: nezha123/titan-edge
+    volumes:
+      - ~/.titanedge:/F:/titan/dockerFile/d1
+    restart: always
+  docker2:
+    container_name: docker2
+    image: nezha123/titan-edge
+    volumes:
+      - ~/.titanedge:/F:/titan/dockerFile/d2
+    restart: always
+  docker3:
+    container_name: docker3
+    image: nezha123/titan-edge
+    volumes:
+      - ~/.titanedge:/F:/titan/dockerFile/d3
+    restart: always
+  docker4:
+    container_name: docker4
+    image: nezha123/titan-edge
+    volumes:
+      - ~/.titanedge:/F:/titan/dockerFile/d4
+    restart: always
+  # docker5:
+  #   container_name: docker5
+  #   image: nezha123/titan-edge
+  #   volumes:
+  #     - ~/.titanedge:/F:/titan/dockerFile/d5
+  #   restart: always
+  # docker6:
+  #   container_name: docker6
+  #   image: nezha123/titan-edge
+  #   volumes:
+  #     - ~/.titanedge:/F:/titan/dockerFile/d6
+  #   restart: always
+  # docker7:
+  #   container_name: docker7
+  #   image: nezha123/titan-edge
+  #   volumes:
+  #     - ~/.titanedge:/F:/titan/dockerFile/d7
+  #   restart: always
+  # docker8:
+  #   container_name: docker8
+  #   image: nezha123/titan-edge
+  #   volumes:
+  #     - ~/.titanedge:/F:/titan/dockerFile/d8
+  #   restart: always
+  # docker9:
+  #   container_name: docker9
+  #   image: nezha123/titan-edge
+  #   volumes:
+  #     - ~/.titanedge:/F:/titan/dockerFile/d9
+  #   restart: always
+  # docker10:
+  #   container_name: docker10
+  #   image: nezha123/titan-edge
+  #   volumes:
+  #     - ~/.titanedge:/F:/titan/dockerFile/d10
+  #   restart: always
