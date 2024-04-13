@@ -15,14 +15,14 @@ fi
 # 批量部署docker镜像
 for i in $(seq 1 5); do
     echo "docker$i"
-    echo "docker run -d --name docker$i -v "~/d$i:/root/.titanedge" nezha123/titan-edge"
-    echo "docker exec "docker$i" titan-edge bind --hash="$hash" https://api-test1.container1.titannet.io/api/v2/device/binding"
-    docker run -d --name "docker$i" -v "~/d$i:/root/.titanedge" nezha123/titan-edge
+    echo "docker run -d --name docker$i -v ~/.titanedge:/root/.titanedge nezha123/titan-edge"
+    docker run -d --name "docker$i" -v ~/.titanedge:/root/.titanedge nezha123/titan-edge
     # 检查上一条命令的退出状态
     if [ $? -eq 0 ]; then
         echo "Docker容器 docker$i 创建成功"
     else
         echo "Docker容器 docker$i 创建失败"
+        continue
     fi
     # 注意把hash换成自己的
     docker exec "docker$i" titan-edge bind --hash="$hash" https://api-test1.container1.titannet.io/api/v2/device/binding
