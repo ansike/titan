@@ -6,5 +6,3 @@ echo "当前nezha123/titan-edge的个数为：$(docker ps -a | grep nezha123/tit
 docker ps -a | grep nezha123/titan-edge | awk '{print $NF}' | xargs docker rm -f
 
 echo "当前nezha123/titan-edge的个数为：$(docker ps -a | grep nezha123/titan-edge | wc -l)"
-
-echo "大功告成~"
