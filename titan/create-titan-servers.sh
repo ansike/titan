@@ -15,8 +15,10 @@ fi
 # 批量部署docker镜像
 for i in $(seq 1 5); do
     echo "docker$i"
-    echo "docker run -d --name docker$i -v ~/.titanedge:/root/.titanedge nezha123/titan-edge"
-    docker run -d --name "docker$i" -v ~/.titanedge:/root/.titanedge nezha123/titan-edge
+    echo "docker run -d --name docker$i -v ~/.titanedge/d$i:/root/.titanedge nezha123/titan-edge"
+    rm -rf ~/.titanedge/d$i
+    mkdir -p ~/.titanedge/d$i
+    docker run -d --name "docker$i" -v ~/.titanedge/d$i:/root/.titanedge nezha123/titan-edge
     # 检查上一条命令的退出状态
     if [ $? -eq 0 ]; then
         echo "Docker容器 docker$i 创建成功"
