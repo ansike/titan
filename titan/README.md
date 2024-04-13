@@ -14,3 +14,8 @@ https://titannet.gitbook.io/titan-network-cn/huygens-testnet/an-zhuang-cheng-xu-
 # 注意将-s后的内容换成自己的hash
 curl -sSL "https://raw.githubusercontent.com/ansike/titan/master/titan/create-titan-servers.sh" | bash -s FA7C84E6-4B22-43E3-BC83-40DC09A6BC61
 ```
+
+- 删除部署的所有docker
+```shell
+curl -sSL "https://raw.githubusercontent.com/ansike/titan/master/titan/delete-titan-servers.sh" | bash
+```
