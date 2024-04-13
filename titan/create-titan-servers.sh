@@ -26,11 +26,10 @@ for i in $(seq 1 5); do
     fi
     # 注意把hash换成自己的
     docker exec "docker$i" titan-edge bind --hash="$hash" https://api-test1.container1.titannet.io/api/v2/device/binding
+    # 检查上一条命令的退出状态
+    if [ $? -eq 0 ]; then
+        echo "Docker容器 docker$i 绑定成功"
+    else
+        echo "Docker容器 docker$i 绑定失败"
+    fi
 done
-
-# 检查上一条命令的退出状态
-if [ $? -eq 0 ]; then
-    echo "大功告成~"
-else
-    echo "请检查入参或者脚本是否最新"
-fi
